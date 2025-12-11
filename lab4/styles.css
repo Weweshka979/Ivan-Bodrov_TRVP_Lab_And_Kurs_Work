@@ -1,0 +1,303 @@
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Основной контейнер */
+.container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Шапка */
+.header {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* Основное содержимое */
+.main-content {
+    padding: 20px;
+}
+
+/* Элементы управления календарем */
+.calendar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 8px;
+}
+
+.nav-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: #2980b9;
+}
+
+.current-month {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2c3e50;
+    min-width: 200px;
+    text-align: center;
+}
+
+.year-input {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 90px;
+    text-align: center;
+}
+
+.year-input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Дни недели */
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.weekday {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+    background: #ecf0f1;
+    border-radius: 5px;
+}
+
+/* Сетка календаря */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+/* Ячейки дней */
+.calendar-day {
+    aspect-ratio: 1;
+    padding: 10px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calendar-day:hover {
+    background: #e8e8e8;
+}
+
+.calendar-day.empty {
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+
+.calendar-day.empty:hover {
+    background: transparent;
+}
+
+/* Сегодняшняя дата - выделение красным */
+.calendar-day.today {
+    background: #ff6b6b;
+    color: white;
+    font-weight: bold;
+    border-color: #ff5252;
+}
+
+/* Дни с задачами - синяя рамка */
+.calendar-day.has-tasks {
+    border: 2px solid #3498db;
+}
+
+/* Модальное окно (оверлей) */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Модальное окно с задачами */
+.task-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 90%;
+    max-width: 500px;
+}
+
+/* Шапка модального окна */
+.modal-header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-header h3 {
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.close-modal:hover {
+    color: #ecf0f1;
+}
+
+/* Тело модального окна */
+.modal-body {
+    padding: 20px;
+}
+
+.task-input {
+    width: 100%;
+    min-height: 150px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.task-input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.task-input::placeholder {
+    color: #95a5a6;
+}
+
+/* Кнопки в модальном окне */
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-btn {
+    background: #3498db;
+    color: white;
+}
+
+.save-btn:hover {
+    background: #2980b9;
+}
+
+.cancel-btn {
+    background: #95a5a6;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #7f8c8d;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .container {
+        border-radius: 5px;
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .current-month {
+        font-size: 1.1rem;
+        min-width: 150px;
+    }
+    
+    .calendar-day {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+    
+    .weekday {
+        padding: 8px 5px;
+        font-size: 0.9rem;
+    }
+}

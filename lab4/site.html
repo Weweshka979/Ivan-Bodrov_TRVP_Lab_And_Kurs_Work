@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Органайзер задач</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="6499091.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Органайзер задач</h1>
+        </header>
+        
+        <main class="main-content">
+            <div class="calendar-controls">
+                <button class="nav-btn prev-month" id="prevMonth" title="Предыдущий месяц">◀</button>
+                <div class="current-month" id="currentMonthYear"></div>
+                <button class="nav-btn next-month" id="nextMonth" title="Следующий месяц">▶</button>
+                <input type="number" class="year-input" id="yearInput" placeholder="Год" min="2000" max="2100">
+            </div>
+            
+            <div class="weekdays">
+                <div class="weekday">Пн</div>
+                <div class="weekday">Вт</div>
+                <div class="weekday">Ср</div>
+                <div class="weekday">Чт</div>
+                <div class="weekday">Пт</div>
+                <div class="weekday">Сб</div>
+                <div class="weekday">Вс</div>
+            </div>
+            
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Календарь будет генерироваться здесь -->
+            </div>
+        </main>
+        
+        <div class="modal-overlay" id="modalOverlay"></div>
+        
+        <div class="task-modal" id="taskModal">
+            <div class="modal-header">
+                <h3 id="modalDate">Задачи на дату</h3>
+                <button class="close-modal" id="closeModal">×</button>
+            </div>
+            <div class="modal-body">
+                <textarea class="task-input" id="taskInput" placeholder="Планов нет"></textarea>
+                <div class="modal-actions">
+                    <button class="btn save-btn" id="saveTasks">Сохранить</button>
+                    <button class="btn cancel-btn" id="cancelBtn">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
