@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\work\artworks-skh227cMiwSqErA3-pyPsgQ-t500x500.jpg" type="image/x-icon">
+    <title>Древний Египет: загадки фараонов</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Кастомные стили -->
+    <link rel="stylesheet" href="main.css">
+    
+    <!-- Подключение jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <!-- Основной скрипт -->
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-light">
+    <!-- Хедер -->
+    <header class="fixed-top bg-warning bg-gradient border-bottom border-2 border-dark py-2 shadow-sm">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <img src="C:\work\artworks-skh227cMiwSqErA3-pyPsgQ-t500x500.jpg" 
+                         alt="Логотип" 
+                         width="45" 
+                         class="logo rounded-circle border border-2 border-dark me-3">
+                    <nav>
+                        <ul class="nav mb-0">
+                            <li class="nav-item me-3 nav-item1">
+                                <a href="#article1" class="nav-link text-dark fw-bold p-0 small">История</a>
+                            </li>
+                            <li class="nav-item me-3 nav-item2">
+                                <a href="#article2" class="nav-link text-dark fw-bold p-0 small">Пирамиды</a>
+                            </li>
+                            <li class="nav-item me-3 nav-item3">
+                                <a href="#article3" class="nav-link text-dark fw-bold p-0 small">Культура</a>
+                            </li>
+                        </ul>
+                        <div id="lower-nav">
+                            <div class="article1">
+                                <a href="#section1" class="nav-link nav-link1 text-dark fw-bold p-0 small">Общая история</a>
+                                <a href="#section2" class="nav-link nav-link2 text-dark fw-bold p-0 small">Хронология</a>
+                            </div>
+                            <div class="article2">
+                                <a href="#section3" class="nav-link nav-link3 text-dark fw-bold p-0 small">Великие пирамиды</a>
+                                <a href="#section4" class="nav-link nav-link4 text-dark fw-bold p-0 small">Строительство</a>
+                            </div>
+                            <div class="article3">
+                                <a href="#section5" class="nav-link nav-link5 text-dark fw-bold p-0 small">Таблица династий</a>
+                                <a href="#section6" class="nav-link nav-link6 text-dark fw-bold p-0 small">Боги Египта</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="text-end">
+                    <h1 class="h6 mb-0 fw-bold text-dark">Древний Египет</h1>
+                    <small class="text-dark opacity-75">Загадки фараонов</small>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="container mt-4 pt-4">
+        <!-- Главный заголовок -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="h3 fw-bold text-warning mb-2">Древний Египет: загадки фараонов</h1>
+                <p class="text-muted">Исследуйте величайшую цивилизацию древнего мира</p>
+            </div>
+        </div>
+
+        <!-- Цветовые переключатели -->
+        <section class="row mb-4">
+            <div class="col-12">
+                <div class="d-flex justify-content-center align-items-center gap-4 p-3 bg-light rounded border">
+                    <div class="d-flex flex-column align-items-center">
+                        <label class="form-label mb-2 fw-semibold">Выберите цвет текста</label>
+                        <input type="color" 
+                               id="text-color" 
+                               value="#8B4513" 
+                               class="form-control form-control-color border border-2 border-dark rounded"
+                               title="Цвет текста"
+                               style="width: 50px; height: 50px;">
+                    </div>
+                    
+                    <div class="d-flex flex-column align-items-center">
+                        <label class="form-label mb-2 fw-semibold">Выберите цвет фона</label>
+                        <input type="color" 
+                               id="bg-color" 
+                               value="#FFF8DC" 
+                               class="form-control form-control-color border border-2 border-dark rounded"
+                               title="Цвет фона"
+                               style="width: 50px; height: 50px;">
+                    </div>
+                    
+                    <div class="d-flex flex-column align-items-center">
+                        <label class="form-label mb-2 fw-semibold invisible">Сброс</label>
+                        <button id="reset-button" class="btn btn-outline-dark px-3">
+                            Сбросить
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Статьи и секции -->
+        <article id="article1" class="mb-5">
+            <section id="section1" class="card border-warning shadow mb-4">
+                <div class="card-body">
+                    <h2 class="card-title text-warning fw-bold">История Древнего Египта</h2>
+                    <p class="card-text">Древний Египет — одна из древнейших цивилизаций, возникшая около 4 тысячелетия до н.э. в долине реки Нил.</p>
+                    <p>Цивилизация процветала более 3000 лет, оставив после себя богатое культурное наследие.</p>
+                </div>
+            </section>
+
+            <section id="section2" class="card border-warning shadow mb-4">
+                <div class="card-body">
+                    <aside>
+                        <div class="aside-content">
+                            <h5 class="text-warning">Интересные факты</h5>
+                            <ul class="list-unstyled">
+                                <li>Первый фараон - Менес (Нармер)</li>
+                                <li>Иероглифическое письмо</li>
+                                <li>Календарь из 365 дней</li>
+                                <li>Папирусные свитки</li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <h2 class="card-title text-warning fw-bold">Хронология периодов</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Древнее царство (2686-2181 до н.э.)</li>
+                        <li class="list-group-item">Среднее царство (2055-1650 до н.э.)</li>
+                        <li class="list-group-item">Новое царство (1550-1069 до н.э.)</li>
+                        <li class="list-group-item">Поздний период (664-332 до н.э.)</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+
+        <article id="article2" class="mb-5">
+            <section id="section3" class="card border-warning shadow mb-4">
+                <div class="card-body">
+                    <h2 class="card-title text-warning fw-bold">Великие пирамиды</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Пирамиды Гизы — единственное из семи чудес древнего мира, сохранившееся до наших дней.</li>
+                        <li class="list-group-item">Пирамида Джосера — первая каменная пирамида.</li>
+                        <li class="list-group-item">Великая пирамида Хеопса — чудо древнего мира.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="section4" class="card border-warning shadow mb-4">
+                <div class="card-body">
+                    <aside>
+                        <div class="aside-content">
+                            <h5 class="text-warning">Технологии строительства</h5>
+                            <p>Пирамиды строились с использованием примитивных инструментов, но с удивительной точностью.</p>
+                        </div>
+                    </aside>
+                    <h2 class="card-title text-warning fw-bold">Технологии строительства пирамид</h2>
+                    <p>Древние египтяне использовали инновационные методы для строительства пирамид, включая системы рычагов, наклонные плоскости и точные математические расчеты.</p>
+                    <figure class="text-center mt-3">
+                        <img src="C:\work\cairo5-scaled.jpg" alt="Великие пирамиды" class="img-fluid rounded shadow" style="max-width: 600px;">
+                        <figcaption class="mt-2 text-muted fst-italic">Великие пирамиды Гизы</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </article>
+
+        <div class="culture-area">
+            <!-- Секция с таблицей -->
+            <section id="section5">
+                <h2 class="mb-4 text-warning fw-bold">Династии фараонов</h2>
+                <div class="table-responsive">
+                    <table class="myTable table table-bordered table-hover table-warning">
+                        <caption class="caption-top fw-bold fs-5 text-dark">Основные династии Древнего Египта</caption>
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Династия</th>
+                                <th>Период</th>
+                                <th>Столица</th>
+                                <th>Известные фараоны</th>
+                                <th>Достижения</th>
+                                <th>Памятники</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="table-primary">I-II</td>
+                                <td>3100-2686 до н.э.</td>
+                                <td>Тинис</td>
+                                <td>Нармер, Менес</td>
+                                <td>Объединение Египта</td>
+                                <td>Некрополь в Абидосе</td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary">III-VI</td>
+                                <td>2686-2181 до н.э.</td>
+                                <td>Мемфис</td>
+                                <td>Джосер, Хеопс</td>
+                                <td>Строительство пирамид</td>
+                                <td>Пирамиды Гизы, Саккары</td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary">XI-XII</td>
+                                <td>2055-1773 до н.э.</td>
+                                <td>Фивы</td>
+                                <td>Ментухотеп II, Аменемхет I</td>
+                                <td>Объединение после смуты</td>
+                                <td>Храмы в Карнаке</td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary">XVIII-XX</td>
+                                <td>1550-1069 до н.э.</td>
+                                <td>Фивы</td>
+                                <td>Тутмос III, Рамсес II</td>
+                                <td>Имперская экспансия</td>
+                                <td>Долина Царей, Абу-Симбел</td>
+                            </tr>
+                            <tr>
+                                <td class="table-primary">XXVI</td>
+                                <td>664-525 до н.э.</td>
+                                <td>Саис</td>
+                                <td>Псамметих I, Нехо II</td>
+                                <td>Последний расцвет</td>
+                                <td>Храм Нейт в Саисе</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+	    <!-- Секция богов -->
+            <section id="section6" class="card border-warning shadow mb-5">
+                <div class="card-body">
+                    <h2 class="card-title text-warning fw-bold">Боги Древнего Египта</h2>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Ра — бог солнца.</li>
+                        <li class="list-group-item">Осирис — бог загробного мира.</li>
+                        <li class="list-group-item">Исида — богиня материнства.</li>
+                        <li class="list-group-item">Гор — бог неба.</li>
+                        <li class="list-group-item">Анубис — бог мумификации.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <article id="article3" class="mb-5">
+
+            <!-- Форма опроса -->
+            <section class="card border-warning shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-warning fw-bold mb-4">Опрос о Древнем Египте</h2>
+                    <form action="/submit" method="post" class="needs-validation" novalidate>
+                        <fieldset class="mb-4">
+                            <legend class="fw-bold text-dark">Основная информация</legend>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Имя:</label>
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Возраст:</label>
+                                    <input type="number" name="age" class="form-control" min="12" max="120">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label">Дата посещения Египта:</label>
+                                    <input type="date" name="visit-date" class="form-control">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mb-4">
+                            <legend class="fw-bold text-dark">Ваши интересы</legend>
+                            <div class="row">
+                                <div class="col-md-3 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="interest" value="history" id="history-check">
+                                        <label class="form-check-label" for="history-check">История</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="interest" value="architecture" id="arch-check">
+                                        <label class="form-check-label" for="arch-check">Архитектура</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="interest" value="religion" id="religion-check">
+                                        <label class="form-check-label" for="religion-check">Религия</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="interest" value="art" id="art-check">
+                                        <label class="form-check-label" for="art-check">Искусство</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mb-4">
+                            <legend class="fw-bold text-dark">Какой период вас интересует больше?</legend>
+                            <div class="row">
+                                <div class="col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="period" value="old-kingdom" id="old-kingdom" required>
+                                        <label class="form-check-label" for="old-kingdom">Древнее царство</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="period" value="middle-kingdom" id="middle-kingdom">
+                                        <label class="form-check-label" for="middle-kingdom">Среднее царство</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="period" value="new-kingdom" id="new-kingdom">
+                                        <label class="form-check-label" for="new-kingdom">Новое царство</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mb-4">
+                            <legend class="fw-bold text-dark">Дополнительная информация</legend>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Телефон:</label>
+                                    <input type="tel" name="phone" class="form-control">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email:</label>
+                                    <input type="email" name="email" class="form-control">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Ваш сайт:</label>
+                                    <input type="url" name="website" class="form-control">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Любимый цвет:</label>
+                                    <input type="color" name="fav-color" class="form-control form-control-color">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="mb-4">
+                            <legend class="fw-bold text-dark">Ваши комментарии</legend>
+                            <textarea name="comments" rows="5" class="form-control" placeholder="Напишите ваши мысли о Древнем Египте..."></textarea>
+                        </fieldset>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="reset" class="btn btn-outline-danger" id="reset">Очистить</button>
+                            <button type="submit" class="btn btn-warning text-dark fw-bold" id="submit">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Футер -->
+    <footer class="bg-dark text-warning py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h3 class="h5">О проекте</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-warning text-decoration-none">Цели проекта</a></li>
+                        <li><a href="#" class="text-warning text-decoration-none">Авторы</a></li>
+                        <li><a href="#" class="text-warning text-decoration-none">Источники</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="h5">Полезные ссылки</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-warning text-decoration-none">Музеи Египта</a></li>
+                        <li><a href="#" class="text-warning text-decoration-none">Книги по теме</a></li>
+                        <li><a href="#" class="text-warning text-decoration-none">Документальные фильмы</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0 small">© 2023 Древний Египет: загадки фараонов. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
